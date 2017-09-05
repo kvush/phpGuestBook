@@ -1,0 +1,38 @@
+/*
+* Кнопка вверх
+*/
+#back-top {
+    position: fixed;
+    bottom: 60px;
+    right: 15px;
+    /*margin-left: 100px;*/
+    display: none;
+}
+#back-top a {
+    width: 50px;
+    display: block;
+    text-align: center;
+
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+#back-top a:hover {
+    color: #000;
+}
+#back-top span {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-bottom: 7px;
+    background: #E2E2E2 url(../images/up-arrow.png) no-repeat center center;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    transition: 1s;
+}
+#back-top a:hover span {
+    background-color: #C5C5C5;
+}
