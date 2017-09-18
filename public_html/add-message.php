@@ -1,8 +1,7 @@
 <?php
 require(__DIR__ . "/../script/config.php");
-$mysqli = new mysqli(HOST, USER, PASS, DATABASE);
 
-//TODO: настроить набор символов
+$mysqli = db_init();
 $title = $mysqli->escape_string($_POST['title']);
 $message = $mysqli->escape_string($_POST['message']);
 

@@ -1,15 +1,9 @@
 <?php
 require(__DIR__ . "/../script/config.php");
-$mysqli = new mysqli(HOST, USER, PASS, DATABASE);
 
-//TODO: настроить набор символов
+$mysqli = db_init();
 $name = $mysqli->escape_string($_POST['name']);
 $email = $mysqli->escape_string($_POST['email']);
-
-//$emailErr = "";
-//if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-//    $emailErr = "Неверный формат email";
-//}
 
 $res = $mysqli->query("SELECT * FROM `users` WHERE `email` = '$email'");
 $row = $res->fetch_assoc();
